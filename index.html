@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UNLV Presents: Build Your First Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <h1>Build Your First Website</h1>
+        <p class="gdiunlv">UNLV's Barrick Museum</p>
+    </div>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#hero">Hero Section</a></li>
+                <ul class="inner-list">
+                    <li><a href="#herohtml">HTML (structure)</a></li>
+                    <li><a href="#herocss">CSS (style)</a></li>
+                </ul>
+                <li><a href="#threecol">Three Column Layout</a></li>
+                <ul class="inner-list">
+                    <li><a href="#threecolhtml">HTML (structure)</a></li>
+                    <li><a href="#threecolcss">CSS (style)</a></li>
+                </ul>
+                <li><a href="#footerlesson">Footer</a></li>
+                <ul class="inner-list">
+                    <li><a href="#footerhtml">HTML (structure)</a></li>
+                    <li><a href="#footercss">CSS (style)</a></li>
+                </ul>
+                <li><a href="#extras">Extras</a></li>
+                <ul class="inner-list">
+                    <li><a href="#extra1">Main Content Area</a></li>
+                    <li><a href="#extra2">Images in Features</a></li>
+                    <li><a href="#extra3">More Items in Footer</a></li>
+                </ul>
+                <li><a href="#hosting">Hosting Your Website</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="introduction content">
+                <h2 id="intro">Introduction</h2>
+                <p>Every website you visit is made using three basic languages: HTML, CSS, and (most of the time) JavaScript.</p>
+                <p>HTML is the structure of the page. CSS is the style of the page, and JavaScript handles the user interactions (ie - what happens if I click on this?</p>
+                <h4>What We're Doing Today</h4>
+                <p>We will construct a basic structure for our page using HTML and style the elements using CSS. We will not be using JavaScript today.</p>
+                <h4>Setting Up Codepen</h4>
+                <ol>
+                    <li>Go to <a href="http://codepen.io">codepen.io</a> and click "Sign Up" in the upper right-hand corner</li>
+                    <li>Once you're logged in, click the button that says "Create" and select "New Pen"</li>
+                    <li>If you'd like to use the view that Rachel showed during the demo, click "Change View" and select the first option</li>
+                    <li>Click the little gear icon near the CSS editor and select "Normalize" for the CSS base</li>
+                    <li>Click "Save & Close"</li>
+                </ol>
+                <p>As you work through this tutorial, be sure to continue saving your work using the save button near the top.</p>
+                <p>If you get stuck or lost at any point, you can open up the examples that are embedded in the tutorial to look at the code, or you can click "Fork" to create a copy to use moving forward for your own.</p>
+            </div>
+            <div class="hero-section content">
+                <h2 id="hero">Hero Section</h2>
+                <p>The "hero section" of a website is the first thing that the user will see. It's usually a large banner image or pattern centered on the top of the page.</p>
+                <h4 id="herohtml">Hero Section HTML (Structure)</h4>
+                <ol>
+                    <li>Add a div and give it a class of "hero"</li>
+                    <li>Inside the div, add an h1 tag with the title of yourself, your website, or your product</li>
+                </ol>
+                <p>This is an example of what you should have so far:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="yQaqxZ" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Hero Section HTML" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/yQaqxZ/">Hero
+                        Section HTML</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="herocss">Hero Section CSS (Style)</h4>
+                <p>There are many different CSS properties that we'll use to style this hero section. First, click on your CSS tab and copy over the code below:</p>
+                <pre><code>
+.hero {
+  display: flex; 
+  background-image: url("");
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: black 4px 4px 20px;
+  font-size: 24px;
+}
+                </code></pre>
+                <p>(Want a detailed explanation of each property? Click <a href="https://gist.github.com/rwarbelow/a682a39d088d220c1f2ad7f73e33c359" target="blank">here</a>.)</p>
+                <h4>Things to Tinker With</h4>
+                <ol>
+                    <li>Change background-position: center center; to <span class="highlight">background-position: bottom center;</span> or <span class="highlight">background-position: top center;</span></li>
+                    <li>Change height: 80vh; to <span class="highlight">height: 30vh;</span> or <span class="highlight">height: 50vh;</span></li>
+                    <li>Change align-items: center; to <span class="highlight">align-items: start;</span> or <span class="highlight">align-items: end;</span></li>
+                    <li>Change the color to something other than white. Find a list of web-safe colors <a href="http://colours.neilorangepeel.com/">here</a>.</li>
+                    <li>Change the number of pixels and color of text-shadow to see what happens.</li>
+                </ol>
+                                
+                <p>This is an example of what you should have so far:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="aQmKgX" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Step 1: Hero Heading" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/aQmKgX/">Step
+                        1: Hero Heading</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="three-column-section content">
+                <h2 id="threecol">Three Column Layout for Features</h2>
+                <p>Next, we'll add text content below our hero section. Ultimately, we want three columns, each containing a small heading for a feature and a paragraph of text. Since the heading and text belong together, we'll group each of them with a div, then style that div.</p>
+                <h4 id="threecolhtml">Three Column Layout HTML (Structure)</h4>
+                <ol>
+                    <li>Create a div that has a class of "container"</li>
+                    <li>Inside of the container div, create another div that has the class of "features"</li>
+                    <li>Inside of features, create *three* separate divs that have the classes of feature-one, feature-two, and feature-three</li>
+                    <li>For each feature, add a small heading (like an h3) and a paragraph (p)</li>
+                </ol>
+                <p>This is an example of what you should have so far:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="jQVaJv" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Three Column HTML " class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/jQVaJv/">Three
+                        Column HTML </a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="threecolcss">Three Column Layout CSS (Style)</h4>
+                <p>We'll again use display: flex; to make it so that our individual features are lined up on the page and flexing to take up space evenly.</p>
+                <p>First, we're going to make our features div display flex, in addition to giving it a property that we'll see the effect of later. Click on your CSS tab and add the following below your already-written code:</p>
+                <pre><code>.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-one {
+  flex-basis: 28%;
+  padding: 15px;
+  background-color: rgba(241,144,45, 0.2);
+}
+
+.feature-two {
+  flex-basis: 28%;
+  padding: 15px;
+  background-color: rgba(141,59,61, 0.2);
+}
+
+.feature-three {
+  flex-basis: 28%;
+  padding: 15px;
+  background-color: rgba(83,122,49, 0.2);
+}
+</code></pre>
+                <p>(Want a detailed explanation of each property? Click <a href="https://gist.github.com/rwarbelow/d595f222a7bd862f5cf5c57d039d48ae" target="blank">here</a>.)</p>
+                <h4>Things to Tinker With</h4>
+                <ol>
+                    <li>Change the percentage for flex-basis to a larger or smaller number.</li>
+                    <li>Change the number of pixels used for padding.</li>
+                    <li>Change the numbers for the RGBA color. Make sure the first three numbers are between 0 and 255, and the final number is between 0 and 1.</li>
+                </ol>
+                <p>This is an example of what you should have so far:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="aQBqow" data-default-tab="css,result" data-user="rwarbelow"
+                    data-pen-title="Three Column CSS " class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/aQBqow/">Three
+                        Column CSS </a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="content">
+                <h2 id="footerlesson">Footer</h2>
+                <p>We'll make a very simple footer that includes an SVG icon and a link.</p>
+                <h4 id="footerhtml">Footer HTML (Structure)</h4>
+                <p>Scroll to the very bottom of your HTML, and find the last two closing div tags. They look like this:</p>
+<pre><code>
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                <p>The first tag closes our features div, and the second one closes our container div. We want our footer to be outside of the features, but still inside the container.</p> 
+                <p><b>Between those two closing div tags</b>, do the following:</p>
+                <ol>
+                    <li>Add a div and give it a class of "footer"</li>
+                    <li>Within the footer div, create another div with the class of "contact"</li>
+                    <li>Click on "assets", then click "icons", and click on an icon you want to represent contacting you. This will copy that code to your clipboard</li>
+                    <li>Paste what was copied into the contact div. It will look pretty messy, but it will work</li>
+                    <li>Directly under the SVG, create a link to email yourself, like this: </li>
+                </ol>
+                <pre><code>
+&lt;a href="mailto:rachel@example.com"&gt;Contact Me&lt;/a&gt;
+                </code></pre>
+                <p>Be sure to change the email address to your own.</p>
+                <p>This is an example of what you should have so far:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="bQBLjE" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Footer HTML" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/bQBLjE/">Footer
+                        HTML</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="footercss">Footer CSS (Style)</h4>
+                <p>We want to center our icon and link, in addition to removing the default underline from our link. First, in your CSS tab on CodePen, create two containers for the style of our footer and the style of our link:</p>
+                <pre><code>
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+
+a {
+  text-decoration: none;
+  color: rgba(83,122,49, 1);
+}</code></pre>
+              <h4>Things to Tinker With</h4>
+                <ol>
+                    <li>Change the number of pixels for margin-top and margin-bottom.</li>
+                    <li>Change the text-decoration to line-through or overline.</li>
+                    <li>Change the numbers for the RGBA color. Make sure the first three numbers are between 0 and 255, and the final number is between 0 and 1.</li>
+                </ol>
+                <p>This is an example of what you should have so far:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="wQomKo" data-default-tab="css,result" data-user="rwarbelow"
+                    data-pen-title="Footer CSS" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/wQomKo/">Footer
+                        CSS</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="extras content">
+                <h2 id="extras">Extras</h2>
+                <p>Want more? Here are a few ideas you can use to jumpstart the next steps for your website.</p>
+                <h4 id="extra1">Main Content Area</h4>
+                <p>Can you figure out how to add a content area between the features and the footer? Look at the example below: </p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="LXbXxK" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Extras: Main Content Area" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/LXbXxK/">Extras:
+                        Main Content Area</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                
+                <h4 id="extra2">Images in Features</h4>
+                <p>Can you add small images below the headings for each feature? Look at the example below:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="xQRQqB" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Extras: Feature Images" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/xQRQqB/">Extras:
+                        Feature Images</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="extra3">More Footer Links</h4>
+                <p>Can you add one or two more icons and links to your footer?Take a look at the example below: </p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="NEbEav" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Extras: More Footer Links" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/NEbEav/">Extras:
+                        More Footer Links</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="hosting content">
+                <h2 id="hosting">Hosting Your Website</h2>
+                <p>Now that you have your project built, let's upload it to the web. To do this, we'll use a service called Forge.</p>
+                <ol>
+                    <li>Go to <a href="http://getforge.com">getforge.com</a> and sign up for a free account. You'll need to confirm your email
+                    address.</li>
+                    <li>From your codepen, click the little button in the lower right-hand corner that says "Export" and select "Export .zip"</li>
+                    <li>Go back to Forge, choose a name for your first site (note, you can only change the first part -- you have to keep getforge.io on the end of it).</li>
+                    <li>Upload your zipped CodePen files</li>
+                    <li>Tada! Visit your custom link to see your site live. You can share this link with the world!</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
